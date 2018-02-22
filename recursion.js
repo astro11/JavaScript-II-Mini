@@ -11,8 +11,15 @@ while (n <= 10) {
 
 // code here
 
+const countToTen = (num = 1) => {
+  console.log('While Looping Im Counting To', num);
+    if (num < 10) {
+    countToTen(num + 1);
+    }
+};
+
 // when you code is ready, un-comment the next line and run the file
-// console.log(countToTen());
+console.log(countToTen());
 /* ================ Next Problem ================= */
 
 // Problem 2:
@@ -29,5 +36,11 @@ console.log(factorial(5));
 
 // write the above function in a recursive way.
 
+const recursiveFactorial = results => {
+  if (results <= 1) return 1;
+   return results * recursiveFactorial(results - 1);
+  
+};
+
 // when your code is ready, un-comment the next line and run the file
-// console.log(recursiveFactorial());
+console.log('RecursiveFactorial is ' + recursiveFactorial(5));
